@@ -46,6 +46,7 @@
         cursor: pointer;
         font-size: 1rem;
         transition: all 0.3s ease;
+        z-index: 10; /* Adiciona um z-index alto para colocá-lo na frente */
     }
 
     .back-btn:hover {
@@ -231,25 +232,53 @@
     }
     
     /* Media Queries para responsividade */
-    @media (max-width: 600px) {
-        .back-btn {
-            top: 1rem;
-            left: 1rem;
-        }
-        h1 {
-            font-size: 2rem;
-        }
-        .ranking-wrapper {
-            padding: 1rem;
-        }
-        .select-materia {
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-        .materia-btn {
-            width: 100%;
-        }
+    /* Media Queries para responsividade */
+@media (max-width: 600px) {
+    .back-btn {
+        top: 1rem;
+        left: 1rem;
+        z-index: 10; /* Garante que esteja na frente também em telas pequenas */
     }
+    h1 {
+        font-size: 2rem;
+    }
+    /* Ajusta a margem do título para dar espaço ao botão */
+    .ranking-title {
+        margin-top: 2rem; /* Adiciona uma margem superior */
+    }
+    .ranking-wrapper {
+        padding-top: 3rem; /* Aumenta o preenchimento superior do container */
+    }
+    .select-materia {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .materia-btn {
+        width: 100%;
+    }
+}
+    /* Media Queries para responsividade */
+@media (max-width: 600px) {
+    .back-btn {
+        top: 1rem;
+        left: 1rem;
+    }
+    
+    /* Outras alterações de responsividade */
+    h1 {
+        font-size: 2rem;
+    }
+    .ranking-wrapper {
+        padding: 1rem;
+    }
+    .select-materia {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .materia-btn {
+        width: 100%;
+    }
+}
 </style>
 </head>
 <body>
