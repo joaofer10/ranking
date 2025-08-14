@@ -85,7 +85,9 @@ const materiaColors = {
 // Função para renderizar o ranking na tela
 function renderRanking(materia) {
     // 1. ADICIONE ESTA LINHA: Mostra o indicador de carregamento
+    const showLoadingTimeout = setTimeout(() => {
     loadingIndicator.style.display = 'block';
+}, 200);
 
     // Adiciona a classe fade-out para iniciar a animação de saída
     rankingList.classList.remove('fade-in');
@@ -146,6 +148,7 @@ function renderRanking(materia) {
         rankingTitle.style.color = materiaColors[materia];
 
         // 2. ADICIONE ESTA LINHA: Esconde o indicador de carregamento
+        clearTimeout(showLoadingTimeout);
         loadingIndicator.style.display = 'none';
 
         // Adiciona a classe fade-in para a animação de entrada da nova lista
