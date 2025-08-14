@@ -231,46 +231,28 @@
         transition: opacity 0.5s ease-in, transform 0.5s ease-in;
     }
     
-    /* Media Queries para responsividade */
-    /* Media Queries para responsividade */
+/* Media Queries para responsividade */
 @media (max-width: 600px) {
+    /* Ajustes para o botão de Voltar */
     .back-btn {
-        top: 1rem;
+        top: 1.5rem; /* Ajuste para a nova posição do topo */
         left: 1rem;
-        z-index: 10; /* Garante que esteja na frente também em telas pequenas */
+        height: 2.5rem; /* Define a altura do botão */
+        z-index: 10; /* Garante que esteja na frente do conteúdo */
     }
-    h1 {
-        font-size: 2rem;
-    }
-    /* Ajusta a margem do título para dar espaço ao botão */
+
+    /* Ajustes para o título do ranking e o container principal */
     .ranking-title {
-        margin-top: 2rem; /* Adiciona uma margem superior */
+        margin-top: 2.5rem; /* Aumenta a margem superior para dar espaço ao botão */
+        font-size: 2rem; /* Mantém o tamanho da fonte do título */
     }
+
     .ranking-wrapper {
-        padding-top: 3rem; /* Aumenta o preenchimento superior do container */
+        padding: 1rem; /* Adiciona um preenchimento geral de 1rem */
+        padding-top: 5rem; /* Aumenta o preenchimento superior para afastar todo o conteúdo do topo */
     }
-    .select-materia {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    .materia-btn {
-        width: 100%;
-    }
-}
-    /* Media Queries para responsividade */
-@media (max-width: 600px) {
-    .back-btn {
-        top: 1rem;
-        left: 1rem;
-    }
-    
-    /* Outras alterações de responsividade */
-    h1 {
-        font-size: 2rem;
-    }
-    .ranking-wrapper {
-        padding: 1rem;
-    }
+
+    /* Ajustes para os botões de matéria */
     .select-materia {
         flex-direction: column;
         gap: 0.5rem;
