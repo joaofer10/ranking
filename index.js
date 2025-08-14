@@ -1,4 +1,4 @@
-
+const loadingIndicator = document.querySelector('.loading-indicator');
 // Dados de exemplo para simular o banco de dados
 // Substitua por dados reais da sua API futuramente
 const rankingData = {
@@ -84,6 +84,9 @@ const materiaColors = {
 // Função para renderizar o ranking na tela
 // Função para renderizar o ranking na tela
 function renderRanking(materia) {
+    // 1. ADICIONE ESTA LINHA: Mostra o indicador de carregamento
+    loadingIndicator.style.display = 'block';
+
     // Adiciona a classe fade-out para iniciar a animação de saída
     rankingList.classList.remove('fade-in');
     rankingList.classList.add('fade-out');
@@ -141,6 +144,9 @@ function renderRanking(materia) {
         const titleText = `Ranking de ${materia.charAt(0).toUpperCase() + materia.slice(1)}`;
         rankingTitle.textContent = titleText;
         rankingTitle.style.color = materiaColors[materia];
+
+        // 2. ADICIONE ESTA LINHA: Esconde o indicador de carregamento
+        loadingIndicator.style.display = 'none';
 
         // Adiciona a classe fade-in para a animação de entrada da nova lista
         rankingList.classList.remove('fade-out');
